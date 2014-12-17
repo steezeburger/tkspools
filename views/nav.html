@@ -1,0 +1,8 @@
+<div class="table">
+  <ul>
+    <li class="branding"><a ng-href="#/">TKS Pools</a></li>
+    <li ng-show="user"><a ng-href="#/customers">Customers</a></li>
+    <li ng-show="user" ng-click="logout()"><a ng-href="#/login">Logout</a></li>
+    <li ng-hide="user"><a ng-href="#/login">Login</a></li>
+  </ul>
+</div>

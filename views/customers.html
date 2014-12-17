@@ -1,0 +1,30 @@
+<section class="customers cf">
+  
+  <h1>Your Customers</h1>
+  <div class="customer" ng-repeat="(key, customer) in customers">
+   <span class="text">{{ customer.firstName }} {{ customer.lastName }}</span>
+   <button class="btn btn-edit tooltip" ng-click="editCustomer(key)">
+     <span>Edit Customer</span>
+   </button>
+   <button class="btn btn-delete tooltip" ng-click="deleteCustomer(key)">
+     <span>Delete Customer</span></button>
+  </div>
+  
+  <h2>Add Customer</h2>
+  <form action="" class="formgroup addcustomer cf" 
+    name="myform" 
+    ng-submit="addCustomer()" 
+    novalidate>
+    <div class="inputwrapper">
+      <input type="text" name="customerfirstname" 
+        placeholder="First Name" 
+        ng-model="customer.firstName" ng-required="true">
+      <input type="text" name="customerlastname" 
+        placeholder="Last Name" 
+        ng-model="customer.lastName" ng-required="true">
+    </div>
+    <button type="submit" class="btn" 
+      ng-disabled="myform.$invalid">+</button>
+  </form>
+  
+</section>
